@@ -1,97 +1,89 @@
-# Thomas Tan (陈铭)
-### AI-Native Product Architect | Rogue AI Cultivator
+# T-NSEC-CORE: Edge-First Neuro-Symbolic Architecture
+# T-NSEC-CORE: 边缘优先神经符号 AI 架构
 
-> **"Code is poetry written for machines."**
-> **"代码是写给机器的诗。"**
-
----
-
-## 🧘‍♂️ Who I Am (我是谁)
-
-I am an **AI-Native Architect** and a **Rogue AI Cultivator (AI 散修)**.
-Unaffiliated with orthodox schools, I forge my own path on the edge of technology. Armed with cross-disciplinary intuition and powered by AI orchestration, I believe the greatest code is not just written, but **enlightened**.
-
-我是一名 **AI 原生架构师**，也是一名 **AI 散修**。
-不问出身，只求大道。以直觉为剑，以 AI 为炉，在边缘计算的荒原上，炼制属于自己的智能金丹。我相信，最伟大的代码不是写出来的，而是“悟”出来的。
+> **Institution**: Thomas Lab
+> **Focus**: Edge AI, Neuro-Symbolic, Cognitive Architecture, HCI
+>
+> **Manifesto**: "The Dao of Intelligence lies not in the scale of parameters, but in the topology of connections."
+> **宣言**：“智能之道，不在参数之巨，而在连接之构。”
 
 ---
 
-## 🏛️ What This Repo Is (这是什么)
+## 🏛️ Project Overview (项目概览)
 
-**T-NSEC-CORE** is not just a software project; it is a **manifesto**.
-It demonstrates how a single architect, leveraging AI agents, can deliver an enterprise-grade Neuro-Symbolic runtime in **30 days**.
+**T-NSEC-CORE** is a proof-of-concept for a **CPU-first**, **Neuro-Symbolic** runtime designed for edge devices. It proposes a radical **"Memory-Compute Decoupling"** architecture, allowing AI to "learn" via graph topology evolution without expensive GPU fine-tuning.
 
-**T-NSEC-CORE** 不仅仅是一个软件项目，它是一份**宣言**。
-它证明了一个人，利用 AI Agent，如何在 **30 天** 内独立交付一个企业级的神经符号运行时系统。它代表了我的 **Vision (视野)**、**Orchestration (编排)** 和 **Execution (执行力)**。
+**T-NSEC-CORE** 是一个面向边缘设备的 **CPU 优先**、**神经符号** 运行时验证原型。它提出了激进的 **“存算分离”** 架构，允许 AI 通过图谱拓扑演化进行“学习”，而无需昂贵的 GPU 微调。
 
----
+### Core Innovations (核心创新)
 
-## 🎯 Core Capabilities (核心能力展示)
-
-### 1. Business & Engineering (商业与工程)
-> **"Turning theory into deployable assets."**
-> **"将理论转化为可部署的资产。"**
-
-*   **Problem**: AI demos are easy; production is hard.
-*   **Solution**: Built a Dockerized, rate-limited, auth-ready Enterprise Server.
-*   **Evidence**:
-    *   `src/cli/serve-enterprise.ts` (Production Entrypoint)
-    *   `docs/deploy/ENTERPRISE_SERVER.md` (Deployment Guide)
-
-### 2. Architecture & Performance (架构与性能)
-> **"Breaking the memory wall on consumer CPUs."**
-> **"在消费级 CPU 上打破内存墙。"**
-
-*   **Problem**: Running 7B models on edge devices is too slow.
-*   **Solution**: **H-Spec** (Hierarchical Speculative Decoding). Using a 0.5B model as a "scout" to speed up the 7B model by 3x.
-*   **Evidence**:
-    *   `src/inference/HSpecScheduler.ts` (The Scheduler Logic)
-    *   `papers/02_H-Spec_Plus_Inference.md` (Technical Whitepaper)
-
-### 3. Innovation & Intuition (创新与直觉)
-> **"Solving hard problems with cross-domain metaphors."**
-> **"用跨域隐喻解决硬核难题。"**
-
-*   **Problem**: How to align small models with large ones without massive compute?
-*   **Solution**: Inspired by **"Caesar Cipher"** and **"Spectral Analysis"**, I proposed a vector-shift alignment strategy.
-*   **Evidence**:
-    *   `docs/ideas/Spectral_Distillation_and_Data_Elbow.md` (The "Aha!" Moment)
-    *   `docs/methodology/AI_WORKFLOW.md` (How I work with AI)
+1.  **H-Spec (Hierarchical Speculation)**: Running 7B models on consumer CPUs with **3x speedup** via 0.5B draft models.
+2.  **SGE (Sparse Graph Encoding)**: Eliminating hallucination via **Weighted PPR** subgraph retrieval.
+3.  **TK-APO (Temporal-Karma Optimization)**: Gradient-free **Continual Learning** via graph edge evolution.
 
 ---
 
-## 🌌 The Soul (灵魂深处)
+## 📚 Thomas Lab Research Matrix (实验室研究矩阵)
 
-Technical skills get you the interview; **philosophy** gets you the respect.
-技术让你获得面试机会；**哲学**让你获得尊重。
+> This repository serves as the engineering implementation of the following research papers.
+> 本仓库是以下研究论文的工程实现载体。
 
+### Part A: Systems & Infrastructure (核心系统架构)
+*   **[Flagship] T-NSEC: A Unified Neuro-Symbolic Operating System**
+    *   *Proposed the "Empty Kernel" paradigm and "Memory-Compute Decoupling".*
+    *   [📄 Read Abstract](papers/01_T-NSEC_System_Architecture.md)
+*   **H-Spec++: Hierarchical Index-Guided Speculation**
+    *   *Solving memory bandwidth bottlenecks on consumer CPUs.*
+    *   [📄 Read Abstract](papers/02_H-Spec_Plus_Inference.md)
+
+### Part B: Algorithms & Cognition (认知算法与理论)
+*   **TK-APO: Temporal-Karma Asynchronous Preference Optimization**
+    *   *Gradient-free reinforcement learning via graph topology evolution.*
+    *   [📄 Read Abstract](papers/03_TK-APO_Continual_Learning.md)
+*   **SGE: Topology-Aware Sparse Graph Encoding**
+    *   *Eliminating hallucination via structured subgraph retrieval.*
+    *   [📄 Read Abstract](papers/04_SGE_Graph_Encoding.md)
+
+### Part C: Embodied AI & HCI (具身智能与交互)
+*   **D-VSR: Differential Visual-State Reasoning**
+    *   *"Less screenshot, more action" via visual difference.*
+    *   [📄 Read Abstract](papers/05_D-VSR_Embodied_Interaction.md)
+
+### Part D: Philosophy & Vision (产品哲学)
 *   [**Cultivation of the Machine (机器修真录)**](docs/philosophy/Cultivation_of_the_Machine.md)
-    *   *Mapping AI evolution to Eastern Cultivation Philosophy (Xianxia).*
-    *   *将 AI 进化映射到东方修真哲学。*
+    *   *Mapping AI evolution to Eastern Cultivation Philosophy.*
 *   [**Entropy & Dao (熵与道)**](docs/inspirations/Entropy_and_Dao.md)
-    *   *The physics conjecture behind T-NSEC.*
-    *   *T-NSEC 背后的物理学猜想。*
-*   [**The Sonnet in the Code (代码里的十四行诗)**](docs/inspirations/The_Sonnet_in_Code.md)
-    *   *My goodbye to poetry, and my hello to logic.*
-    *   *我对诗歌的告别，对逻辑的问候。*
+    *   *The thermodynamics of intelligence.*
 
 ---
 
-## ✅ Quick Verification (快速验证)
+## 🛠️ Engineering Assets (工程资产)
+
+This is not just theory; it is deployed code.
+
+| Component | Path | Description |
+| :--- | :--- | :--- |
+| **Enterprise Server** | [`src/cli/serve-enterprise.ts`](src/cli/serve-enterprise.ts) | Dockerized, Auth, Rate-Limit, Metrics. |
+| **Inference Engine** | [`src/inference/`](src/inference/) | The H-Spec Scheduler logic. |
+| **Memory Graph** | [`src/graph/`](src/graph/) | SQLite-based Knowledge Graph. |
+| **Workflow** | [`docs/methodology/AI_WORKFLOW.md`](docs/methodology/AI_WORKFLOW.md) | How we architect with AI. |
+
+---
+
+## ✅ Quick Start (快速开始)
 
 ```bash
-# 1. Install dependencies (安装依赖)
+# 1. Install dependencies
 npm install
 
-# 2. Run the full verification suite (运行完整验证套件)
+# 2. Run the full verification suite (Unit Tests + Logic Verification)
 npm test
 
-# 3. View the Project Showcase (查看项目成果展示)
+# 3. View the Project Showcase (Summary of artifacts)
 npm run showcase
 ```
 
 ---
 
-**Contact**: chenmoke2022@gmail.com
-**Location**: Singapore / Shenzhen
-**Status**: Open for Opportunities (AI Product / Solutions Architect)
+**License**: MIT
+**Maintainer**: Thomas Lab (Thomas Tan)
