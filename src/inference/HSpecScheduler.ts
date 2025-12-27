@@ -64,6 +64,13 @@ export interface SchedulerStats {
   overallTPW: number;
 }
 
+/**
+ * HSpecScheduler Class
+ * 
+ * Implements the hierarchical scheduling logic for speculative decoding.
+ * It manages a priority queue of tasks and dispatches them to the appropriate inference strategy
+ * based on task complexity (Level) and system load.
+ */
 export class HSpecScheduler {
   private engine: InferenceEngine;
   private config: HSpecConfig;
@@ -108,6 +115,8 @@ export class HSpecScheduler {
 
   /**
    * 提交任务
+   * Submits a task to the scheduler queue.
+   * @param task The task to be scheduled
    */
   submit(task: Task): void {
     this.taskQueue.push(task);
@@ -117,6 +126,8 @@ export class HSpecScheduler {
 
   /**
    * 批量提交任务
+   * Submits a batch of tasks.
+   * @param tasks Array of tasks
    */
   submitBatch(tasks: Task[]): void {
     this.taskQueue.push(...tasks);
@@ -126,6 +137,9 @@ export class HSpecScheduler {
 
   /**
    * 按优先级和截止时间排序队列
+   * Priority Queue implementation:
+   * 1. Earliest Deadline First (EDF)
+   * 2. Highest Priority First (HPF)
    */
   private sortQueue(): void {
     this.taskQueue.sort((a, b) => {
@@ -143,6 +157,8 @@ export class HSpecScheduler {
 
   /**
    * 处理下一个任务
+   * Processes the next task in the queue.
+   * Decisions are logged for audit trail.
    */
   async processNext(): Promise<ScheduleResult | null> {
     if (this.taskQueue.length === 0) {
@@ -172,29 +188,36 @@ export class HSpecScheduler {
     };
 
     // 执行推理
-    const result = await this.engine.infer(task.prompt, taskConfig);
-    
-    // 更新统计
-    this.updateStats(task, result, strategy);
-    
-    const queueWaitTime = performance.now() - queueStartTime - result.duration;
-    
-    this.processingTask = null;
+    try {
+        const result = await this.engine.infer(task.prompt, taskConfig);
+        
+        // 更新统计
+        this.updateStats(task, result, strategy);
+        
+        const queueWaitTime = performance.now() - queueStartTime - result.duration;
+        
+        this.processingTask = null;
 
-    // 验证性能
-    this.validatePerformance(task.level, result);
+        // 验证性能
+        this.validatePerformance(task.level, result);
 
-    return {
-      task,
-      result,
-      strategy,
-      queueWaitTime: Math.max(0, queueWaitTime),
-      schedulingDecision,
-    };
+        return {
+        task,
+        result,
+        strategy,
+        queueWaitTime: Math.max(0, queueWaitTime),
+        schedulingDecision,
+        };
+    } catch (error) {
+        console.error(`[HSpecScheduler] Task failed: ${task.id}`, error);
+        this.processingTask = null;
+        throw error;
+    }
   }
 
   /**
    * 处理所有任务
+   * Drains the entire task queue.
    */
   async processAll(): Promise<ScheduleResult[]> {
     const results: ScheduleResult[] = [];
@@ -211,6 +234,9 @@ export class HSpecScheduler {
 
   /**
    * 决定调度策略
+   * Decision Logic:
+   * - High complexity tasks (L3/PLANNING) benefit from H-Spec (Speculative Decoding).
+   * - Low complexity tasks (L1/L2) are faster with direct inference due to overhead.
    */
   private decideStrategy(task: Task): 'DIRECT' | 'HSPEC' {
     // 核心策略：仅对 L3 和 PLANNING 启用 H-Spec
@@ -392,7 +418,7 @@ export class HSpecScheduler {
    */
   updateConfig(config: Partial<HSpecConfig>): void {
     this.config = { ...this.config, ...config };
-    console.log('⚙️ H-Spec 配置已更新');
+    console.log('[HSpecScheduler] Config updated');
   }
 
   /**
@@ -413,4 +439,3 @@ export class HSpecScheduler {
 }
 
 export default HSpecScheduler;
-

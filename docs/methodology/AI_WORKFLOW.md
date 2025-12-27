@@ -19,6 +19,16 @@
 
 In the traditional software lifecycle, this project would require a team of 3-5 engineers (Frontend, Backend, DevOps, Research) working for 3-6 months. I delivered it alone in 4 weeks.
 
+### Skill Matrix: Traditional Dev vs. AI-Native Architect
+
+| Capability | Traditional Developer | **Me (AI-Native Architect)** |
+| :--- | :--- | :--- |
+| **Code Writing** | Manually typing syntax (Speed limit: 50 wpm) | **Prompting logic & constraints** (Speed limit: ∞) |
+| **Knowledge** | Memorizing APIs & Libraries | **Fast Indexing & Synthesis** of new domains |
+| **Focus** | "How to implement function X?" | **"What is the best architecture for X?"** |
+| **Output** | Functions / Modules | **Full Systems / Products** |
+| **Validation** | Unit Tests | **Logic Audit & System Integration** |
+
 ### My Role vs. AI's Role
 
 | Domain | My Role (The Architect/PM) | AI's Role (The Engine/Cursor) |
@@ -35,11 +45,13 @@ In the traditional software lifecycle, this project would require a team of 3-5 
 
 This is a prime example of how I translate **intuition** into **code** without knowing the syntax.
 
+### The Process
+
 1.  **The Intuition**: I felt that simply training a model to "mimic" another wasn't enough. It needed to learn the *structural relationship* of the data, not just the output. I visualized this as "aligning the shape of the data clouds."
-2.  **The Prompt**: I explained this visual intuition to the AI: *"Don't just minimize the error. Make the student model's embedding distribution look like the teacher's. Like fitting two 3D clouds together."*
-3.  **The Translation**: The AI suggested using **Spectral Analysis** and **Singular Value Decomposition (SVD)** to align the covariance matrices.
-4.  **The Code**: The AI generated the PyTorch code for the spectral loss function.
-5.  **The Result**: I verified the performance. It worked better than standard distillation.
+2.  **The Prompt (My Input)**:
+    > "Don't just minimize the MSE error. I want the student model's embedding distribution to look like the teacher's geometrically. Think of it like aligning two 3D point clouds. Can we use something like Eigenvalues or Spectral Analysis to align their covariance matrices?"
+3.  **The Translation (AI's Output)**: The AI suggested using **Singular Value Decomposition (SVD)** and generated the PyTorch code for a custom `SpectralLoss` function.
+4.  **The Result**: I verified the performance. It worked better than standard distillation.
 
 **Value**: I didn't write the PyTorch matrix operations, but the *innovation* came from my intuition.
 

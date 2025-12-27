@@ -6,6 +6,8 @@ import { HDCEngine } from '../src/hdc/HDCEngine.js';
 import assert from 'node:assert';
 import { describe, it } from 'node:test';
 
+console.log('[HDC] Test suite loaded');
+
 describe('HDCEngine', () => {
   const hdc = new HDCEngine(10000, 42);
 
@@ -69,6 +71,4 @@ describe('HDCEngine', () => {
     });
   });
 });
-
-console.log('✅ HDC Engine 测试文件已创建');
 

@@ -16,5 +16,14 @@ services:
     ports:
       - "8088:8088"
     restart: unless-stopped
-
-
+    healthcheck:
+      # 说明：runtime 镜像为 node:20-alpine，默认不包含 curl/wget。
+      # 使用 Node 20 内置 fetch 来做健康检查，保证容器内可执行。
+      test:
+        [
+          "CMD-SHELL",
+          "node -e \"fetch('http://127.0.0.1:8088/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
