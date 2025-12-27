@@ -6,7 +6,8 @@
 
 <div align="center">
 
-[![Resume](https://img.shields.io/badge/📄_Read_My_Resume-AI__Native_Architect-blue?style=for-the-badge)](Thomas_Tan_Resume_AI_Native.md)
+[![Resume](https://img.shields.io/badge/📄_Resume_(English)-AI__Native_Architect-blue?style=for-the-badge)](Thomas_Tan_Resume_AI_Native.md)
+[![Resume CN](https://img.shields.io/badge/📄_简历_(中文)-AI_原生架构师-red?style=for-the-badge)](Thomas_Tan_Resume_CN.md)
 [![Status](https://img.shields.io/badge/🟢_Open_for_Opportunities-Singapore_%2F_Shenzhen-success?style=for-the-badge)](mailto:chenmoke2022@gmail.com)
 
 </div>
