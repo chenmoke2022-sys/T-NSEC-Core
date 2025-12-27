@@ -1,0 +1,57 @@
+# Dependencies / build
+node_modules/
+dist/
+build/
+.cache/
+*.tsbuildinfo
+
+# Local env (secrets must never be committed)
+.env
+.env.*
+
+# Local assets / caches (not for Git)
+models/**
+!models/README.md
+data/
+logs/
+reports/
+
+# Model / training artifacts (never commit)
+*.gguf
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.npy
+*.npz
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Benchmark large intermediate artifacts (keep only reports/CSV/PNG, exclude huge matrices/weights)
+benchmark/**/artifacts/*.pt
+benchmark/**/artifacts/*.npy
+benchmark/**/artifacts/*matrix*.json
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+

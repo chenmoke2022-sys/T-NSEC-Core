@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "T-NSEC-CORE (Thomas Lab): CPU-First Neuro-Symbolic Continual Learning"
+message: "If you use this repository, please cite it."
+authors:
+  - family-names: "Tan"
+    given-names: "Thomas"
+    email: "chenmoke2022@gmail.com"
+    name: "Thomas Tan (陈铭)"
+version: "0.1.0"
+date-released: "2025-12-26"
+license: "MIT"
+
+

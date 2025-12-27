@@ -1,0 +1,59 @@
+{
+  "name": "t-nsec-core",
+  "version": "4.0.0",
+  "description": "Thomas Zero 4.0: GPU-Accelerated Neuro-Symbolic Cognitive Architecture",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "npx tsx src/main.ts",
+    "dev": "npx tsx src/cli/dev-ollama.ts",
+    "dev:watch": "npx tsx --watch src/cli/dev-ollama.ts",
+    "serve": "npx tsx src/cli/serve-enterprise.ts",
+    "hello": "npx tsx scripts/hello.ts",
+    "verify-hdc": "npx tsx scripts/verify-hdc.ts",
+    "verify-tree-cos": "npx tsx scripts/verify-tree-cos.ts",
+    "showcase": "npx tsx scripts/showcase.ts",
+    "begin": "pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/begin.ps1",
+    "verify-gpu": "echo \"Moved to backup: scripts/verify-gpu.ts\"",
+    "benchmark-full": "npx tsx scripts/benchmark-full.ts",
+    "benchmark-gpu": "npx tsx scripts/benchmark-gpu.ts",
+    "benchmark-holographic": "npx tsx scripts/benchmark-holographic.ts",
+    "benchmark-treecos-comparison": "npx tsx scripts/benchmark-treecos-comparison.ts",
+    "test-hspec-workflow": "npx tsx scripts/test-hspec-scheduler-workflow.ts",
+    "integration-test": "npx tsx scripts/run-integration-test.ts",
+    "test-cuda": "npx tsx scripts/test-cuda-support.ts",
+    "start-services": "npx tsx scripts/start-services.ts",
+    "paper-benchmark": "python scripts/run_complete_benchmark.py",
+    "verify-env": "npx tsx scripts/verify-environment.ts",
+    "setup": "npm install && npm run verify-env",
+    "test": "npx tsx --test tests/all.test.ts"
+  },
+  "keywords": [
+    "neuro-symbolic",
+    "cognitive-architecture",
+    "edge-computing",
+    "hyperdimensional-computing",
+    "lifelong-learning"
+  ],
+  "author": "Thomas Tan (陈铭) <chenmoke2022@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.6.0",
+    "commander": "^12.1.0",
+    "node-llama-cpp": "^3.14.5",
+    "sharp": "^0.33.0",
+    "tesseract.js": "^5.0.4",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.10.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

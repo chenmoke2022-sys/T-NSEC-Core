@@ -1,0 +1,20 @@
+services:
+  tnsec:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      T_NSEC_HOST: 0.0.0.0
+      T_NSEC_PORT: 8088
+      T_NSEC_OLLAMA_BASE_URL: http://host.docker.internal:11434
+      T_NSEC_OLLAMA_DRAFT_MODEL: qwen2.5:0.5b
+      T_NSEC_OLLAMA_VERIFY_MODEL: qwen2.5:7b
+      # Optional:
+      # T_NSEC_API_KEY: "change-me"
+      # T_NSEC_RATE_RPS: "5"
+      # T_NSEC_RATE_BURST: "20"
+    ports:
+      - "8088:8088"
+    restart: unless-stopped
+
+

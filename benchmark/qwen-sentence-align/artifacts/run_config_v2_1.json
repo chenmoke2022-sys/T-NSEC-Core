@@ -1,0 +1,36 @@
+{
+  "args": {
+    "data_dir": "qwen-sentence-align/data",
+    "artifacts_dir": "qwen-sentence-align/artifacts",
+    "student_dim": 896,
+    "teacher_dim": 3584,
+    "epochs": 8,
+    "batch_size": 64,
+    "accumulate_steps": 1,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "mse_weight": 0.1,
+    "triplet_weight": 0.2,
+    "margin": 0.1,
+    "seed": 42
+  },
+  "dataset_size": 1800,
+  "train_records": 1800,
+  "triplets": 1800,
+  "device_info": {
+    "platform": "win32",
+    "cuda_version": "12.1",
+    "devices": 1,
+    "current_device": 0,
+    "timestamp": "2025-12-26T15:35:33.256428"
+  },
+  "output": {
+    "head": "benchmark/qwen-sentence-align/artifacts/align_head_v2_1.pt",
+    "matrix": "benchmark/qwen-sentence-align/artifacts/W_v2_1.npy"
+  },
+  "train_metrics": {
+    "avg_cosine": 0.9845874309539795,
+    "P50": 0.9862415790557861,
+    "P95": 0.9943219423294067
+  }
+}
