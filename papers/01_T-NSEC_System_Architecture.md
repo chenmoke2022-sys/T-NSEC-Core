@@ -4,10 +4,10 @@
 **Status**: Draft for arXiv Preprint
 **Authors**: Thomas Lab
 
-## Abstract (摘要)
-> **核心问题**：现在的 AI 太重（依赖 GPU）、太贵（推理成本高）、且容易遗忘（无法持续学习）。
-> **解决方案**：我们提出了“存算分离”架构。内核归零，记忆即图谱。
-> **创新点**：将操作系统内核设计为一个纯粹的调度器，而将所有业务逻辑下沉到 MCP 插件和 SQLite 图谱中。
+> **中文摘要**：
+> *   **核心问题**：现代大模型（LLM）过于庞大，依赖昂贵的 GPU，且存在“灾难性遗忘”问题，难以在边缘设备（如笔记本、树莓派）上低成本部署。
+> *   **解决方案**：我们提出了 T-NSEC 架构，核心理念是“存算分离”。将操作系统内核简化为纯粹的调度器，记忆下沉到图谱（SGE），计算分层处理（H-Spec）。
+> *   **贡献**：证明了在消费级 CPU 上，通过算法优化而非硬件堆砌，也能实现具备持续学习能力的智能系统。
 
 ## 1. Introduction (引言)
 *   The challenge of deploying LLMs on edge devices (Raspberry Pi, Consumer Laptops).
@@ -28,4 +28,3 @@
 
 ## 5. Conclusion (结论)
 *   T-NSEC proves that AGI-lite is possible on edge hardware.
-

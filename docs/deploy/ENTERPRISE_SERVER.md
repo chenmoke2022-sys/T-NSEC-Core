@@ -1,4 +1,13 @@
 # Enterprise Server Deployment (Production Mode)
+# 企业级服务器部署指南（生产模式）
+
+> **中文摘要**：
+> 本文档介绍了如何部署 T-NSEC-CORE 的生产级 HTTP 服务器 (`serve-enterprise.ts`)。
+> *   **功能**：提供 API 密钥认证、速率限制 (Rate Limiting)、健康检查和 Prometheus 监控指标。
+> *   **架构**：支持 Docker 容器化部署，通过 HTTP 接口统一调度 Draft (0.5B) 和 Verify (7B) 模型。
+> *   **场景**：适用于需要对外提供稳定 AI 服务的企业环境。
+
+---
 
 This repository provides a production-oriented HTTP entrypoint: `src/cli/serve-enterprise.ts`.
 
@@ -51,5 +60,3 @@ docker compose -f docker-compose.enterprise.yml up --build
 Notes:
 - The container expects Ollama reachable at `host.docker.internal:11434` by default.
 - For Linux servers, set `T_NSEC_OLLAMA_BASE_URL` to the correct Ollama host/IP.
-
-

@@ -4,10 +4,12 @@
 **Status**: Draft for arXiv Preprint
 **Authors**: Thomas Lab
 
-## Abstract (摘要)
-> **核心问题**：微调模型会导致“灾难性遗忘”，且无法在边缘设备上运行。
-> **解决方案**：模拟人脑的突触连接强度（Karma）。
-> **创新点**：引入“时间向量衰减”。不常用的知识权重自动下降，被用户点赞的知识权重上升。这实现了无需梯度的强化学习（RLHF）。
+> **中文摘要**：
+> *   **核心问题**：传统的微调（Fine-tuning）成本高昂，且容易导致“灾难性遗忘”（学了新知识，忘了旧知识）。
+> *   **解决方案**：受人脑突触连接强度（Karma）和艾宾浩斯遗忘曲线的启发，提出无需梯度的优化算法。
+> *   **创新点**：
+>     *   **Karma 机制**：根据用户反馈动态调整知识图谱中边（Edge）的权重。
+>     *   **时间衰减**：不常用的知识权重随时间自动下降，实现“优胜劣汰”的记忆管理。
 
 ## 1. Introduction
 *   Catastrophic Forgetting in Fine-tuning.
@@ -25,4 +27,3 @@
 *   Is "perfect memory" desirable? The trade-off between forgetting and efficiency.
 
 ## 5. Conclusion
-

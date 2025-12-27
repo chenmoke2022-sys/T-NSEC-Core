@@ -4,10 +4,13 @@
 **Status**: Draft for arXiv Preprint
 **Authors**: Thomas Lab
 
-## Abstract (摘要)
-> **核心问题**：在 CPU 上跑大模型太慢，内存带宽是瓶颈。
-> **解决方案**：利用人类语言的重复性（齐夫定律）。
-> **创新点**：引入 Trie-Cache（字典树缓存）作为“L0 级猜测”，0.5B 模型作为“L1 级猜测”，7B 模型仅作为“验证者”。这实现了 O(1) 复杂度的常见查询响应。
+> **中文摘要**：
+> *   **核心问题**：在 CPU 上运行 7B 以上大模型时，内存带宽是主要瓶颈，导致推理速度极慢。
+> *   **解决方案**：利用人类语言的“齐夫定律”（高频词重复出现），构建分层推测机制。
+> *   **创新点**：
+>     1.  **L0 级**：Trie-Cache（字典树缓存），实现常用短语的 O(1) 极速命中。
+>     2.  **L1 级**：0.5B 小模型作为“草稿生成器”，快速产出候选文本。
+>     3.  **L2 级**：7B 大模型仅作为“验证者”，大幅减少昂贵的计算次数。
 
 ## 1. Introduction
 *   Speculative Decoding is usually for GPUs. We adapt it for CPUs.
@@ -26,4 +29,3 @@
 *   Speedup ratios on various hardware (Haswell i5 to M2 Pro).
 
 ## 5. Conclusion
-

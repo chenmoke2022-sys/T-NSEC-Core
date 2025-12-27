@@ -4,10 +4,12 @@
 **Status**: Draft for arXiv Preprint
 **Authors**: Thomas Lab
 
-## Abstract (摘要)
-> **核心问题**：用 AI 操作电脑（Computer Use）太慢、太贵。
-> **解决方案**：少截图，多干活。
-> **创新点**：只在屏幕发生显著变化（差分 > 5%）时才调用视觉模型。对于重复性操作，建立“视觉哈希索引”，实现毫秒级的“肌肉记忆”操作。
+> **中文摘要**：
+> *   **核心问题**：现有的 GUI 自动化（Computer Use）方案过于依赖高频截图和视觉模型（VLM），延迟高且成本昂贵。
+> *   **解决方案**：引入“视觉肌肉记忆”概念，减少不必要的视觉推理。
+> *   **创新点**：
+>     *   **视觉差分**：只在屏幕发生显著变化（差分 > 5%）时才调用视觉模型。
+>     *   **VMM (视觉肌肉记忆)**：建立“屏幕哈希 -> 操作动作”的映射表，对于重复性任务实现毫秒级响应。
 
 ## 1. Introduction
 *   The cost of VLM (Vision Language Model) inference.
@@ -25,4 +27,3 @@
 *   Success rate and latency on WebArena / MiniWoB++.
 
 ## 5. Conclusion
-
