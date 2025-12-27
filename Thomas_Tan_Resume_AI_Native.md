@@ -10,7 +10,7 @@
 
 **"Architecting Intelligence on the Edge with Intuition & Code."**
 
-13 years of diverse experience (SEA E-commerce / Gov / Entrepreneurship). **Not a traditional coder**, but an **AI Orchestrator** who leverages LLMs to build enterprise-grade systems. Proven ability to architect and deliver complex solutions (T-NSEC) from scratch in **30 days** by combining product vision with AI execution.
+13 years of diverse experience (SEA E-commerce / FinTech / Gov). **Not a traditional coder**, but an **AI Orchestrator** who leverages LLMs to build enterprise-grade systems. Proven ability to architect and deliver complex solutions (T-NSEC) from scratch in **30 days** by combining product vision with AI execution.
 
 Expert in **Edge AI**, **Neuro-Symbolic Architecture**, and **Cross-Cultural Strategy**. I bridge the gap between "Business Logic" and "Technical Implementation" using AI agents.
 
@@ -45,9 +45,9 @@ Expert in **Edge AI**, **Neuro-Symbolic Architecture**, and **Cross-Cultural Str
 *   **Traffic Arbitration**: Managed user acquisition strategies for SEA markets. Leveraged **content intuition** to capture viral trends (Douyin/TikTok), achieving breakout sales in live streaming.
 *   **Supply Chain**: Invested in bird's nest processing facilities in Malaysia/Indonesia. Gained deep **local business insights** and cross-cultural management experience.
 
-### **China UnionPay Merchant Services (Ningbo Branch)**
+### **China UMS (UnionPay Merchant Services) Ningbo Branch**
 **Executive Writer & PR** | *2015 - 2017*
-*   **Structured Thinking**: Honed rigorous logic and writing skills through official government correspondence. This foundation now powers my ability to write precise **System Prompts** for AI agents.
+*   **FinTech Rigor**: Worked at China's largest payment processor. Honed rigorous logic and structured writing skills through official corporate communication. This foundation now powers my ability to write precise **System Prompts** for AI agents.
 
 ### **Ningbo Public Security Bureau (Panhuo Station)**
 **Publicity Officer** | *2013 - 2015*
@@ -58,8 +58,10 @@ Expert in **Edge AI**, **Neuro-Symbolic Architecture**, and **Cross-Cultural Str
 ## 🎓 Education
 
 **Shaoxing University**
-*Bachelor of Arts in Teaching Chinese as a Foreign Language* | *2009 - 2013*
-*   **The Poet's Edge**: President of the Literature Society. My background in linguistics and poetry gives me a unique advantage in understanding **NLP (Natural Language Processing)** semantics and **Prompt Engineering** nuances.
+*   **Bachelor of Science in Psychology (Double Degree)** | *2009 - 2013*
+    *   **Cognitive Science Foundation**: My psychology background provides the theoretical basis for my **"Superego/Id" AI architecture**. Understanding human memory models (Short-term/Long-term) directly inspired the T-NSEC Memory System.
+*   **Bachelor of Arts in Teaching Chinese as a Foreign Language** | *2009 - 2013*
+    *   **Linguistic Sensitivity**: President of the Literature Society. Deep understanding of semantics helps me master **Prompt Engineering** nuances.
 
 ---
 
